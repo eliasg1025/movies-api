@@ -1,6 +1,14 @@
 const express = require('express');
 const MoviesService = require('../services/movies');
 
+const {
+    movieIdSchema,
+    createMoviesSchema,
+    updateMoviesSchema
+} = require('../utils/schemas/movies');
+
+const validationHanlder = require('../utils/middleware/validationHanlder');
+
 function moviesApi(app) {
     const router = express.Router();
     app.use('/api/movies', router);
@@ -20,10 +28,10 @@ function moviesApi(app) {
             });
         } catch(err) {
             next(err);
-        }
+        } 
     });
 
-    router.get('/:movieId', async function(req, res, next) {
+    router.get('/:movieId', validationHanlder({ movieId: movieIdSchema }, 'params'), async function(req, res, next) {
         const { movieId } = req.params;
 
         try {
@@ -38,7 +46,7 @@ function moviesApi(app) {
         }
     });
 
-    router.post('/', async function(req, res, next) {
+    router.post('/', validationHanlder(createMoviesSchema), async function(req, res, next) {
         const { body: movie } = req;
 
         try {
@@ -53,7 +61,7 @@ function moviesApi(app) {
         }
     });
 
-    router.put('/:movieId', async function(req, res, next) {
+    router.put('/:movieId', validationHanlder({ movieId: movieIdSchema }, 'params'), validationHanlder(updateMoviesSchema), async function(req, res, next) {
         const { movieId } = req.params;
         const { body: movie } = req;
 
@@ -85,7 +93,7 @@ function moviesApi(app) {
         }
     });
 
-    router.delete('/:movieId', async function(req, res, next) {
+    router.delete('/:movieId', validationHanlder({ movieId: movieIdSchema }, 'params'), async function(req, res, next) {
         const { movieId } = req.params;
 
         try {
