@@ -1,4 +1,5 @@
 const boom = require('@hapi/boom');
+const debug = require('debug')('app:error');
 const { config } = require('../../config');
 
 function withErrorStack(error, stack) {

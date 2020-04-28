@@ -1,4 +1,5 @@
 const express = require('express');
+const debug = require('debug')('app:server');
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -30,5 +31,5 @@ app.use(wrapErrors)
 app.use(errorHandler);
 
 app.listen(config.port, function() {
-    console.log(`Listening http://localhost:${config.port}`);
+    debug(`Listening http://localhost:${config.port}`);
 });

@@ -10,13 +10,13 @@ const moviesMock = [
         contentRating: 'G',
         source: 'https://ovh.net/semper/rutrum/nulla/nunc.jsp',
         tags: [
-        'Action|Adventure',
-        'Action|Adventure|Thriller',
-        'Horror|Western',
-        'Horror|Thriller',
-        'Comedy|Romance|Sci-Fi',
-        'Adventure|Animation|Children|Comedy|Fantasy',
-        'Drama'
+            'Action|Adventure',
+            'Action|Adventure|Thriller',
+            'Horror|Western',
+            'Horror|Thriller',
+            'Comedy|Romance|Sci-Fi',
+            'Adventure|Animation|Children|Comedy|Fantasy',
+            'Drama'
         ]
     },
     {
@@ -31,14 +31,14 @@ const moviesMock = [
         source:
         'https://multiply.com/dui/proin/leo/odio/porttitor/id/consequat.jsp',
         tags: [
-        'Comedy',
-        'War',
-        'Drama|Horror',
-        'Comedy|Drama|Romance',
-        'Drama|Thriller',
-        'Comedy',
-        'Action|Drama|War',
-        'Drama'
+            'Comedy',
+            'War',
+            'Drama|Horror',
+            'Comedy|Drama|Romance',
+            'Drama|Thriller',
+            'Comedy',
+            'Action|Drama|War',
+            'Drama'
         ]
     },
     {
@@ -76,11 +76,11 @@ const moviesMock = [
         contentRating: 'G',
         source: 'http://pagesperso-orange.fr/varius/ut/blandit/non/interdum/in.js',
         tags: [
-        'Crime|Drama|Mystery|Thriller',
-        'Crime|Drama|Mystery|Thriller',
-        'Comedy|Sci-Fi',
-        'Adventure|Comedy|Sci-Fi',
-        'Drama'
+            'Crime|Drama|Mystery|Thriller',
+            'Crime|Drama|Mystery|Thriller',
+            'Comedy|Sci-Fi',
+            'Adventure|Comedy|Sci-Fi',
+            'Drama'
         ]
     },
     {
@@ -130,12 +130,12 @@ const moviesMock = [
         contentRating: 'PG',
         source: 'https://flavors.me/lorem/ipsum/dolor/sit.json',
         tags: [
-        'Animation|Comedy',
-        'Documentary',
-        'Action|Fantasy|Horror',
-        'Thriller',
-        'Comedy|Crime',
-        'Drama'
+            'Animation|Comedy',
+            'Documentary',
+            'Action|Fantasy|Horror',
+            'Thriller',
+            'Comedy|Crime',
+            'Drama'
         ]
     },
     {
