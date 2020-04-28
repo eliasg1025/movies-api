@@ -19,7 +19,6 @@ app.use(express.json());
 // Morgan
 app.use(morgan('dev'));
 
-
 moviesApi(app);
 
 // Catch 404
