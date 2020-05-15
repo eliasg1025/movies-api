@@ -1,5 +1,5 @@
 # API de peliculas
-Para el curso fullstask javascript
+Para el curso fullstack javascript
 
 # Movies
 Base URI: `/api/movies`
