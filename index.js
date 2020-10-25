@@ -6,7 +6,10 @@ const cors = require('cors');
 const app = express();
 
 const { config } = require('./config/index');
+
+const authApi = require('./routes/auth');
 const moviesApi = require('./routes/movies');
+const userMoviesApi = require('./routes/userMovies'); 
 
 const { logErrors, errorHandler, wrapErrors } = require('./utils/middleware/errorHandlers');
 const notFoundHanlder = require('./utils/middleware/notFoundHanlder');
@@ -20,7 +23,9 @@ app.use(express.json());
 // Morgan
 app.use(morgan('dev'));
 
+authApi(app);
 moviesApi(app);
+userMoviesApi(app);
 
 // Catch 404
 app.use(notFoundHanlder);
